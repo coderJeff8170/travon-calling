@@ -1,134 +1,128 @@
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<!-- 
-User Story #1: My product landing page should have a header element with a corresponding id="header".√
+<!doctype html>
+<html lang="en">
 
-User Story #2: I can see an image within the header element with a corresponding id="header-img". A company logo would make a good image here.√
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- adapted from original code at https://codepen.io/coderJeff8170/full/WNvVXmr -->
+    <title>Travon Calling</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fascinate|Lexend+Giga|Signika+Negative&display=swap"
+        rel="stylesheet">
+    <script src="menu.js" defer></script>
+</head>
 
-User Story #3: Within the #header element I can see a nav element with a corresponding id="nav-bar".√
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <nav class="nav-bar" id="nav-bar">
+                <a class="nav-link" href="#header" class="active">home</a>
+                <a class="nav-link" href="#services">services</a>
+                <a class="nav-link" href="#about">about Travon</a>
+                <a class="nav-link" href="#mow">mow my lawn!</a>
+                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+            <img id="header-img" src="./assets/travon-calling-logo.png"
+                alt="Travon Calling Mower Logo png">
+            <p id="logo-tag">Professional Landscaping</p>
+            <div id="hero">
 
-User Story #4: I can see at least three clickable elements inside the nav element, each with the class nav-link.√
+                <div class="before-after" id="before">
+                    <div class="before-after-text" id="before-text">Before</div>
+                </div>
+                <div class="before-after" id="after">
+                    <div class="before-after-text" id="after-text">After</div>
+                </div>
+                <div id="title-container">
+                    <!--         <h1 id="title">Travon Calling!</h1> -->
+                    <p id="tagline">If you can grow it, We can mow it!</p>
+                </div>
+            </div>
 
-User Story #5: When I click a .nav-link button in the nav element, I am taken to the corresponding section of the landing page.√
+        </header>
+        <main>
+            <section id="services">
+                <div class="service" id="mow-and-go">
+                    <div class="service-type">Mow & Go</div>
+                    <h2>$40</h2>
+                    <ul>
+                        <li>mow only</li>
+                        <li>fast</li>
+                        <li>economical</li>
+                    </ul>
+                    <button class="btn">Call Travon!</button>
+                </div>
+                <div class="service" id="mow-and-blo">
+                    <div class="service-type">Mow & Blo</div>
+                    <h2>$50</h2>
+                    <ul>
+                        <li>mower</li>
+                        <li>blower</li>
+                        <li>economical</li>
+                    </ul>
+                    <button class="btn">Call Travon!</button>
+                </div>
+                <div class="service" id="mow-and-weed">
+                    <div class="service-type">Mow-Weed-Blow</div>
+                    <h2>$60</h2>
+                    <ul>
+                        <li>mower</li>
+                        <li>weedeater</li>
+                        <li>blower</li>
+                    </ul>
+                    <button class="btn">Call Travon!</button>
+                </div>
+                <div class="service" id="landscape">
+                    <div class="service-type">Landscape</div>
+                    <h2>$160</h2>
+                    <ul>
+                        <li>mow weed blow</li>
+                        <li>spread mulch</li>
+                        <li>weed flower beds</li>
+                    </ul>
+                    <button class="btn">Call Travon!</button>
+                </div>
+            </section>
+            <section id="video-section">
+                <h2>See how we do!</h2>
+                <div id="video-container">
+                    <iframe id="video" src="https://www.youtube.com/embed/aOT14wYphpk" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </section>
+            <section id="about">
+                <h2>About Travon Calling</h2>
 
-User Story #6: I can watch an embedded product video with id="video".√
+                <p id="info-text"> <img id="trey-pic" src="./assets/trey.png"
+                        alt="picture of travon">Travon is a young family man from Charlotte, NC, who is friendly,
+                    fearless, and capable. If you can grow it, he can mow it! He likes girls, energy drinks, and lives
+                    with an old army-vet who watches Fox News all day. </p>
 
-User Story #7: My landing page has a form element with a corresponding id="form".√
+            </section>
 
-User Story #8: Within the form, there is an input field with id="email" where I can enter an email address.√
-
-User Story #9: The #email input field should have placeholder text to let the user know what the field is for.√
-
-User Story #10: The #email input field uses HTML5 validation to confirm that the entered text is an email address.√
-
-User Story #11: Within the form, there is a submit input with a corresponding id="submit".√
-
-User Story #12: When I click the #submit element, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit).√
-
-User Story #13: The navbar should always be at the top of the viewport.√
-
-User Story #14: My product landing page should have at least one media query.√
-
-User Story #15: My product landing page should utilize CSS flexbox at least once. √
-
-Travon Calling? -->
-<link href="https://fonts.googleapis.com/css?family=Fascinate|Lexend+Giga|Signika+Negative&display=swap" rel="stylesheet">
-
-<div id="wrapper">
-  <header id="header">
-    <nav class="nav-bar" id="nav-bar">
-      <a class="nav-link" href="#header" class="active">home</a>
-      <a class="nav-link" href="#services">services</a>
-      <a class="nav-link" href="#about">about Travon</a>
-      <a class="nav-link" href="#mow">mow my lawn!</a>
-      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </nav>
-    <img id="header-img" src="https://www.paintedbyjeff.com/FCC/travon-calling-logo.png" alt="Travon Calling Mower Logo png">
-    <p id="logo-tag">Professional Landscaping</p>
-    <div id="hero">
-
-      <div class="before-after" id="before">
-        <div class="before-after-text" id="before-text">Before</div>
-      </div>
-      <div class="before-after" id="after">
-        <div class="before-after-text" id="after-text">After</div>
-      </div>
-      <div id="title-container">
-        <!--         <h1 id="title">Travon Calling!</h1> -->
-        <p id="tagline">If you can grow it, We can mow it!</p>
-      </div>
+            <section id="mow">
+                <form id="form" action="https://www.freecodecamp.com/email-submit">
+                    <input id="email" name="email" type="email" placeholder="enter email address" required>
+                    <input id="submit" type="submit" class="btn" value="Mow my lawn!" />
+                </form>
+            </section>
+        </main>
+        <footer id="footer">
+            <a href="https://www.facebook.com/lul.t.savage" target="_blank"><i class="fab fa-facebook-square"
+                    aria-hidden="true"></i>
+                <span class="sr-only">facebook</span></a>
+            <a href="https://www.instagram.com/travon_coll/" target="_blank"><i class="fab fa-instagram"
+                    aria-hidden="true"></i>
+                <span class="sr-only">instagram</span></a>
+            <p>©pbjdesign2020</p>
+        </footer>
     </div>
 
-  </header>
-  <main>
-    <section id="services">
-      <div class="service" id="mow-and-go">
-        <div class="service-type">Mow & Go</div>
-        <h2>$40</h2>
-        <ul>
-          <li>mow only</li>
-          <li>fast</li>
-          <li>economical</li>
-        </ul>
-        <button class="btn">Call Travon!</button>
-      </div>
-      <div class="service" id="mow-and-blo">
-        <div class="service-type">Mow & Blo</div>
-        <h2>$50</h2>
-        <ul>
-          <li>mower</li>
-          <li>blower</li>
-          <li>economical</li>
-        </ul>
-        <button class="btn">Call Travon!</button>
-      </div>
-      <div class="service" id="mow-and-weed">
-        <div class="service-type">Mow-Weed-Blow</div>
-        <h2>$60</h2>
-        <ul>
-          <li>mower</li>
-          <li>weedeater</li>
-          <li>blower</li>
-        </ul>
-        <button class="btn">Call Travon!</button>
-      </div>
-      <div class="service" id="landscape">
-        <div class="service-type">Landscape</div>
-        <h2>$160</h2>
-        <ul>
-          <li>mow weed blow</li>
-          <li>spread mulch</li>
-          <li>weed flower beds</li>
-        </ul>
-        <button class="btn">Call Travon!</button>
-      </div>
-    </section>
-    <section id="video-section">
-      <h2>See how we do!</h2>
-      <div id="video-container">
-        <iframe id="video" src="https://www.youtube.com/embed/aOT14wYphpk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </section>
-    <section id="about">
-      <h2>About Travon Calling</h2>
+</body>
 
-      <p id="info-text"> <img id="trey-pic" src="https://www.paintedbyjeff.com/FCC/trey.png" alt="picture of travon">Travon is a young family man from Charlotte, NC, who is friendly, fearless, and capable. If you can grow it, he can mow it! He likes girls, energy drinks, and lives with an old army-vet who watches Fox News all day. </p>
-
-    </section>
-
-    <section id="mow">
-      <form id="form" action="https://www.freecodecamp.com/email-submit">
-        <input id="email" name="email" type="email" placeholder="enter email address" required>
-        <input id="submit" type="submit" class="btn" value="Mow my lawn!" />
-      </form>
-    </section>
-  </main>
-  <footer id="footer">
-    <a href="https://www.facebook.com/lul.t.savage" target="_blank"><i class="fab fa-facebook-square" aria-hidden="true"></i>
-      <span class="sr-only">facebook</span></a>
-    <a href="https://www.instagram.com/travon_coll/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i>
-      <span class="sr-only">instagram</span></a>
-    <p>©pbjdesign2020</p>
-  </footer>
-</div>
+</html>
