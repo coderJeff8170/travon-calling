@@ -1,0 +1,353 @@
+/* ---------------- global ----------------- */
+
+body {
+  font-family: "Signika Negative", sans-serif;
+  margin: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  background: hsl(100, 80%, 70%);
+}
+
+section {
+  display: flex;
+  padding: 10px 0;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0;
+}
+
+footer {
+  background: hsl(100, 70%, 35%);
+  padding: 20px 0 10px 0;
+  color: hsl(100, 100%, 10%);
+}
+
+footer > a {
+  font-size: 4rem;
+  padding-top: 10px;
+  padding: 10px 5px 0;
+  text-decoration: none;
+  color: hsl(100, 100%, 10%);
+}
+
+footer > p {
+  margin: 0 0 10px 0;
+}
+
+/* ---------------- classes ----------------- */
+.before-after-text {
+  display: none;
+}
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 260px;
+  background: hsl(100, 80%, 90%);
+  color: hsl(100, 100%, 10%);
+  margin: 10px;
+}
+
+.service:hover {
+  /*  animate this!! width: 280px;
+  height: 260px; */
+}
+
+.service > h2 {
+  color: hsl(355, 70%, 35%);
+  margin: 20px 0 0 0;
+}
+
+.service > ul {
+  margin: 10px 0 20px 0;
+}
+
+.service-type {
+  padding: 10px 0 10px 0;
+  background: hsl(100, 70%, 35%);
+}
+
+.btn {
+  font-family: "Signika Negative", sans-serif;
+  font-weight: bold;
+  background: hsl(355, 70%, 35%);
+  color: hsl(100, 80%, 70%);
+  font-size: 1.25rem;
+  border: none;
+  padding: 10px 0;
+}
+
+.btn:hover {
+  background: hsl(100, 70%, 35%);
+  color: hsl(100, 100%, 10%);
+}
+
+/* ---------------- ids ----------------- */
+
+#header-img {
+  width: 300px;
+  padding: 75px 10px 10px 10px;
+  margin-bottom: 0;
+}
+
+#nav-bar {
+  position: fixed;
+  background: green;
+  width: 100%;
+  z-index: 1;
+}
+
+#nav-bar a {
+  display: none;
+  padding: 10px 10px;
+  color: hsl(100, 80%, 70%);
+  text-decoration: none;
+}
+
+#nav-bar a:hover {
+  background: hsl(100, 80%, 70%);
+  color: green;
+}
+
+#nav-bar .icon {
+  float: right;
+  display: block;
+  padding-right: 15px;
+}
+
+#nav-bar.responsive {
+  position: fixed;
+}
+
+#nav-bar.responsive .icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#nav-bar.responsive a {
+  float: none;
+  display: block;
+  text-align: center;
+}
+
+#logo-tag {
+  color: hsl(100, 100%, 10%);
+  font-size: 1.5rem;
+  margin-top: -10px;
+}
+
+#hero {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  min-height: 300px;
+}
+
+#before {
+  display: none;
+}
+
+#after {
+  width: 100%;
+  background-image: url("https://www.paintedbyjeff.com/FCC/aftermow2.png");
+  background-size: cover;
+}
+
+#title-container {
+  color: white;
+  position: absolute;
+  width: 100%;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#tagline {
+  font-family: "Lexend Giga", sans-serif;
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+#services {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#video-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: hsl(100, 70%, 35%);
+}
+
+#video-section > h2 {
+  color: hsl(100, 100%, 10%);
+}
+
+#video {
+  width: 400px;
+  height: 250px;
+}
+#trey-pic {
+  width: 300px;
+}
+
+#about {
+  /*   color: darkgreen; */
+  color: hsl(100, 100%, 15%);
+  display: block;
+  text-align: center;
+  background: hsl(100, 80%, 85%);
+}
+
+#info-text {
+  font-size: 1.25rem;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 10px 0;
+  text-align: left;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+#form > input {
+  border: none;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+#email {
+  background: hsl(100, 80%, 85%);
+  padding: 15px 0;
+}
+
+#submit {
+  background: hsl(355, 70%, 35%);
+  min-height: 50px;
+}
+
+#submit:hover {
+  background: hsl(100, 70%, 35%);
+}
+/* ---------------- media queries ----------------- */
+
+@media (min-width: 640px) {
+  body {
+    font-size: 1rem;
+  }
+
+  #nav-bar a {
+    float: right;
+    display: inline;
+    font-size: 1.25rem;
+    padding: 14px 16px;
+  }
+
+  #nav-bar .icon {
+    display: none;
+  }
+
+  #title-container {
+    top: 85%;
+  }
+
+  #tagline {
+    font-size: 1.5rem;
+  }
+
+  #before {
+    display: block;
+    width: 50%;
+    background: lightgreen;
+    background-image: url("https://www.paintedbyjeff.com/FCC/beforemow2.png");
+    background-size: cover;
+  }
+
+  #after {
+    width: 50%;
+    background-image: url("https://www.paintedbyjeff.com/FCC/aftermow2.png");
+    background-size: cover;
+  }
+
+  .before-after-text {
+    position: absolute;
+    display: block;
+    color: white;
+
+    bottom: 10px;
+  }
+  #before-text {
+    left: 20px;
+  }
+
+  #after-text {
+    right: 20px;
+  }
+
+  #services {
+    padding: 20px 0;
+  }
+  .service {
+    min-width: 175px;
+  }
+
+  #video {
+    width: 560px;
+    height: 315px;
+    /*   width="560" height="315" */
+  }
+
+  #about {
+    position: relative;
+    padding-top: 70px;
+    display: flex;
+  }
+  #about > h2 {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    text-align: center;
+  }
+
+  #trey-pic {
+    width: 150px;
+    float: left;
+    margin: 10px;
+  }
+
+  #info-text {
+    max-width: 500px;
+  }
+
+  #form > input {
+    margin: 10px auto;
+    width: 400px;
+  }
+
+  footer {
+    position: relative;
+  }
+  footer > a {
+    font-size: 3rem;
+  }
+
+  footer > p {
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+  }
+}
