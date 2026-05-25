@@ -1,4 +1,4 @@
-/* ---------------- global ----------------- */
+/* ============= GLOBAL STYLES ============= */
 
 body {
   font-family: "Signika Negative", sans-serif;
@@ -8,9 +8,40 @@ body {
   background: hsl(100, 80%, 70%);
 }
 
+header {
+  background: hsl(100, 80%, 70%);
+}
+
+main {
+  background: hsl(100, 80%, 70%);
+}
+
 section {
   display: flex;
   padding: 10px 0;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 260px;
+  background: hsl(100, 80%, 90%);
+  color: hsl(100, 100%, 10%);
+  margin: 10px;
+}
+
+article:hover {
+  /* animate this: transform: scale(1.05); */
+}
+
+article > h2 {
+  color: hsl(355, 70%, 35%);
+  margin: 20px 0 0 0;
+}
+
+article > ul {
+  margin: 10px 0 20px 0;
 }
 
 ul {
@@ -37,38 +68,118 @@ footer > p {
   margin: 0 0 10px 0;
 }
 
-/* ---------------- classes ----------------- */
+/* ============= NAVBAR ============= */
+
+nav {
+  position: fixed;
+  background: green;
+  width: 100%;
+  z-index: 1;
+}
+
+nav a {
+  display: none;
+  padding: 10px 10px;
+  color: hsl(100, 80%, 70%);
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: hsl(100, 80%, 70%);
+  color: green;
+}
+
+.menu-icon {
+  float: right;
+  display: block;
+  padding-right: 15px;
+}
+
+nav.responsive {
+  position: fixed;
+}
+
+nav.responsive .menu-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+nav.responsive a {
+  float: none;
+  display: block;
+  text-align: center;
+}
+
+/* ============= HEADER ============= */
+
+.logo {
+  width: 300px;
+  padding: 75px 10px 10px 10px;
+  margin-bottom: 0;
+}
+
+.tagline {
+  color: hsl(100, 100%, 10%);
+  font-size: 1.5rem;
+  margin-top: -10px;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  min-height: 300px;
+}
+
+.before-after {
+  position: relative;
+}
+
 .before-after-text {
   display: none;
 }
-.service {
+
+.before {
+  display: none;
+}
+
+.after {
+  width: 100%;
+  background-image: url("https://www.paintedbyjeff.com/FCC/aftermow2.png");
+  background-size: cover;
+}
+
+.hero-title {
+  color: white;
+  position: absolute;
+  width: 100%;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-tagline {
+  font-family: "Lexend Giga", sans-serif;
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+/* ============= SERVICES SECTION ============= */
+
+#services {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-width: 260px;
-  background: hsl(100, 80%, 90%);
-  color: hsl(100, 100%, 10%);
-  margin: 10px;
-}
-
-.service:hover {
-  /*  animate this!! width: 280px;
-  height: 260px; */
-}
-
-.service > h2 {
-  color: hsl(355, 70%, 35%);
-  margin: 20px 0 0 0;
-}
-
-.service > ul {
-  margin: 10px 0 20px 0;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .service-type {
   padding: 10px 0 10px 0;
   background: hsl(100, 70%, 35%);
 }
+
+/* ============= BUTTONS ============= */
 
 .btn {
   font-family: "Signika Negative", sans-serif;
@@ -78,6 +189,9 @@ footer > p {
   font-size: 1.25rem;
   border: none;
   padding: 10px 0;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -85,99 +199,7 @@ footer > p {
   color: hsl(100, 100%, 10%);
 }
 
-/* ---------------- ids ----------------- */
-
-#header-img {
-  width: 300px;
-  padding: 75px 10px 10px 10px;
-  margin-bottom: 0;
-}
-
-#nav-bar {
-  position: fixed;
-  background: green;
-  width: 100%;
-  z-index: 1;
-}
-
-#nav-bar a {
-  display: none;
-  padding: 10px 10px;
-  color: hsl(100, 80%, 70%);
-  text-decoration: none;
-}
-
-#nav-bar a:hover {
-  background: hsl(100, 80%, 70%);
-  color: green;
-}
-
-#nav-bar .icon {
-  float: right;
-  display: block;
-  padding-right: 15px;
-}
-
-#nav-bar.responsive {
-  position: fixed;
-}
-
-#nav-bar.responsive .icon {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-#nav-bar.responsive a {
-  float: none;
-  display: block;
-  text-align: center;
-}
-
-#logo-tag {
-  color: hsl(100, 100%, 10%);
-  font-size: 1.5rem;
-  margin-top: -10px;
-}
-
-#hero {
-  position: relative;
-  text-align: center;
-  width: 100%;
-  display: flex;
-  min-height: 300px;
-}
-
-#before {
-  display: none;
-}
-
-#after {
-  width: 100%;
-  background-image: url("https://www.paintedbyjeff.com/FCC/aftermow2.png");
-  background-size: cover;
-}
-
-#title-container {
-  color: white;
-  position: absolute;
-  width: 100%;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#tagline {
-  font-family: "Lexend Giga", sans-serif;
-  font-size: 1rem;
-  margin-top: 0;
-}
-
-#services {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
+/* ============= VIDEO SECTION ============= */
 
 #video-section {
   display: flex;
@@ -190,23 +212,26 @@ footer > p {
   color: hsl(100, 100%, 10%);
 }
 
+.video-container {
+  display: flex;
+  justify-content: center;
+}
+
 #video {
   width: 400px;
   height: 250px;
 }
-#trey-pic {
-  width: 300px;
-}
+
+/* ============= ABOUT SECTION ============= */
 
 #about {
-  /*   color: darkgreen; */
   color: hsl(100, 100%, 15%);
   display: block;
   text-align: center;
   background: hsl(100, 80%, 85%);
 }
 
-#info-text {
+.about-text {
   font-size: 1.25rem;
   max-width: 300px;
   margin: 0 auto;
@@ -214,7 +239,13 @@ footer > p {
   text-align: left;
 }
 
-#form {
+.about-image {
+  width: 300px;
+}
+
+/* ============= FORM (COMMENTED OUT) ============= */
+
+form {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -222,7 +253,7 @@ footer > p {
   padding: 30px 0;
 }
 
-#form > input {
+form > input {
   border: none;
   font-size: 1.5rem;
   text-align: center;
@@ -230,46 +261,38 @@ footer > p {
   margin: 10px 0;
 }
 
-#email {
+.email-input {
   background: hsl(100, 80%, 85%);
   padding: 15px 0;
 }
 
-#submit {
-  background: hsl(355, 70%, 35%);
-  min-height: 50px;
-}
-
-#submit:hover {
-  background: hsl(100, 70%, 35%);
-}
-/* ---------------- media queries ----------------- */
+/* ============= MEDIA QUERIES ============= */
 
 @media (min-width: 640px) {
   body {
     font-size: 1rem;
   }
 
-  #nav-bar a {
+  nav a {
     float: right;
     display: inline;
     font-size: 1.25rem;
     padding: 14px 16px;
   }
 
-  #nav-bar .icon {
+  .menu-icon {
     display: none;
   }
 
-  #title-container {
+  .hero-title {
     top: 85%;
   }
 
-  #tagline {
+  .hero-tagline {
     font-size: 1.5rem;
   }
 
-  #before {
+  .before {
     display: block;
     width: 50%;
     background: lightgreen;
@@ -277,7 +300,7 @@ footer > p {
     background-size: cover;
   }
 
-  #after {
+  .after {
     width: 50%;
     background-image: url("https://www.paintedbyjeff.com/FCC/aftermow2.png");
     background-size: cover;
@@ -287,28 +310,28 @@ footer > p {
     position: absolute;
     display: block;
     color: white;
-
     bottom: 10px;
   }
-  #before-text {
+
+  .before .before-after-text {
     left: 20px;
   }
 
-  #after-text {
+  .after .before-after-text {
     right: 20px;
   }
 
   #services {
     padding: 20px 0;
   }
-  .service {
+
+  article {
     min-width: 175px;
   }
 
   #video {
     width: 560px;
     height: 315px;
-    /*   width="560" height="315" */
   }
 
   #about {
@@ -316,6 +339,7 @@ footer > p {
     padding-top: 70px;
     display: flex;
   }
+
   #about > h2 {
     position: absolute;
     width: 100%;
@@ -323,17 +347,17 @@ footer > p {
     text-align: center;
   }
 
-  #trey-pic {
+  .about-image {
     width: 150px;
     float: left;
     margin: 10px;
   }
 
-  #info-text {
+  .about-text {
     max-width: 500px;
   }
 
-  #form > input {
+  form > input {
     margin: 10px auto;
     width: 400px;
   }
@@ -341,6 +365,7 @@ footer > p {
   footer {
     position: relative;
   }
+
   footer > a {
     font-size: 3rem;
   }
